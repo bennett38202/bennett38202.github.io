@@ -66,8 +66,6 @@ main {
     border: 3px solid rgb(52, 103, 150);
 }
 
-
-
 .content {
     flex: 1;
     padding: 15px;
@@ -80,22 +78,9 @@ main {
     margin-top: 20px;
 }
 
-h2, h3 {
-    margin: 0px;
-    color:rgb(52, 103, 150);
-}
-
-h3 {
-    margin: 0px;
-    color: #dbe9f4;
-}
-
+/*Colors the Senior at EA Text*/
 p {
-    color: white;
-}
-
-li {
-    color: white;
+    color: rgb(52, 103, 150);
 }
 
 .mainint {
@@ -111,23 +96,27 @@ li {
   color: white;
 }
 
-#portfolio {
+/*Takes away dots for the list*/
+.portfolio {
   list-style-type: none;
   padding-left: 0;
 }
 
-#portfolio li {
+/*Creates boxes around the items*/
+.portfolio li {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-#portfolio li:hover {
+/*MAKES the box transparent when hovering*/
+.portfolio li:hover {
   background: #eee;
 }
 
-#portfolio a {
+/*Changes text color of portfolio items*/
+.portfolio a {
   text-decoration: none;
   color: rgb(52, 103, 150);
 }
@@ -180,3 +169,19 @@ li {
     align-content: center;
     justify-content: center;
   }
+
+/*IMAGE BAR*/
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+img {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+.caption {
+    display: block;
+}
