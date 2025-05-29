@@ -1,38 +1,31 @@
 body {
     background: #b2c2db;
-    color: #556e7d64;
-    padding: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
-}
-
-#all-contents {
-    max-width: 800px;
-    margin: auto;
 }
 
 /* navigation menu */
 nav {
     background: #8daad6;
     padding: 10px;
-    display: flex;
-    justify-content: middle;
+    /*display: flex;
+    justify-content: middle;*/
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
-h1 {
+h1,h2,h3 {
     display: flex;
     align-items: center;
     color: white;
-    flex: 1;
+    /*flex: 1;*/
     margin: 0;
 }
 
 #nav-ul {
-    list-style-type: none;
+    /*list-style-type: none;*/
     margin: 0;
-    padding: 0;
+    /*padding: 0;*/
     display: flex;
 }
 
@@ -55,12 +48,13 @@ main {
 }
 
 .sidebar {
-    margin-right: 25px;
-    padding: 10px;
+    /*margin-right: 25px;*/
+    /*padding: 10px;*/
 }
 
 .sidebar-img {
     display: flex;
+    width: 200px;
     justify-content: center;
     width: 40%;
     border: 3px solid rgb(52, 103, 150);
@@ -73,7 +67,6 @@ main {
 
 /* interests section styles */
 #interests {
-    border: 4px rgb(52, 103, 150) ridge;
     padding: 8px;
     margin-top: 20px;
 }
@@ -97,13 +90,13 @@ p {
 }
 
 /*Takes away dots for the list*/
-.portfolio {
+#portfolio {
   list-style-type: none;
   padding-left: 0;
 }
 
 /*Creates boxes around the items*/
-.portfolio li {
+#portfolio li {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -111,12 +104,37 @@ p {
 }
 
 /*MAKES the box transparent when hovering*/
-.portfolio li:hover {
+#portfolio li:hover {
   background: #eee;
 }
 
 /*Changes text color of portfolio items*/
-.portfolio a {
+#portfolio a {
+  text-decoration: none;
+  color: rgb(52, 103, 150);
+}
+
+/*Takes away dots for the list*/
+#interests {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*Creates boxes around the items*/
+#interests li {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/*MAKES the box transparent when hovering*/
+#interests li:hover {
+  background: #eee;
+}
+
+/*Changes text color of home page items*/
+#interests a {
   text-decoration: none;
   color: rgb(52, 103, 150);
 }
@@ -169,19 +187,3 @@ p {
     align-content: center;
     justify-content: center;
   }
-
-/*IMAGE BAR*/
-div.item {
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-}
-img {
-    width: 100px;
-    height: 100px;
-    background-color: grey;
-}
-.caption {
-    display: block;
-}
