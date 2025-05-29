@@ -1,43 +1,56 @@
 body {
     background: #b2c2db;
+    /*color: rgb(45, 45, 45);*/
+    /*padding: 10px;*/
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
 }
 
+
+/*#all-contents {
+    max-width: 800px;
+    margin: auto;
+}*/
+
+
 /* navigation menu */
 nav {
     background: #8daad6;
-    padding: 10px;
-    /*display: flex;
-    justify-content: middle;*/
     margin-bottom: 20px;
     border-radius: 10px;
+    display: flex;
+    padding: 10px;
 }
+
 
 h1,h2,h3 {
     display: flex;
     align-items: center;
     color: white;
-    /*flex: 1;*/
+    flex: 1;
     margin: 0;
 }
 
+
 #nav-ul {
-    /*list-style-type: none;*/
+    list-style-type: none;
     margin: 0;
-    /*padding: 0;*/
+    padding: 0;
     display: flex;
 }
 
+
 .nav-li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 10px;
 }
+
 
 a {
     text-decoration: none;
     color: #dbe9f4;
 }
+
 
 /* main container area beneath menu */
 main {
@@ -47,23 +60,33 @@ main {
     border-radius: 10px;
 }
 
+
 .sidebar {
-    /*margin-right: 25px;*/
-    /*padding: 10px;*/
+    display: flex;
 }
 
-.sidebar-img {
+
+#sidebar-img-index {
     display: flex;
-    width: 200px;
+    width: 300px;
+    height: 425px;
     justify-content: center;
-    width: 40%;
     border: 3px solid rgb(52, 103, 150);
 }
+
+#sidebar-img-port {
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    border: 3px solid rgb(52, 103, 150);
+}
+
 
 .content {
     flex: 1;
     padding: 15px;
 }
+
 
 /* interests section styles */
 #interests {
@@ -71,23 +94,21 @@ main {
     margin-top: 20px;
 }
 
-/*Colors the Senior at EA Text*/
 p {
     color: rgb(52, 103, 150);
 }
 
-.mainint {
+/*.mainint {
     color:rgb(52, 103, 150);
-}
+}*/
 
-.subint {
+/*.subint {
     color:rgb(52, 103, 150, 0.589);
-}
+}*/
 
-/* Portfolio styles */
-.content h1 {
+/*.content h1 {
   color: white;
-}
+}*/
 
 /*Takes away dots for the list*/
 #portfolio {
@@ -114,7 +135,7 @@ p {
   color: rgb(52, 103, 150);
 }
 
-/*Takes away dots for the list*/
+  /*Takes away dots for the list*/
 #interests {
   list-style-type: none;
   padding-left: 0;
@@ -147,26 +168,32 @@ p {
     display: grid;
   }
 
+
   h1 {
     font-size: 44px;
   }
+
 
   h2 {
     font-size: 42px;
   }
 
+
   h3 {
     font-size: 36px;
   }
+
 
   #all-contents {
     height: 100ch;
     margin: none;
   }
 
+
   a {
     font-size: 42px;
   }
+
 
   .sidebar {
     margin-right: 0px;
@@ -174,14 +201,17 @@ p {
     align-items: center;
   }
 
+
   .sidebar-img {
     width: 100%;
   }
+
 
   p,
   li {
     font-size: 24px;
   }
+
 
   .content {
     align-content: center;
