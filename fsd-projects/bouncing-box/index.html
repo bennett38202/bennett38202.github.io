@@ -10,6 +10,8 @@
 			width: 70px;
 			height: 70px;
 			background-color: teal;
+			background-image:url("https://i5.walmartimages.com/seo/12-Inch-Sports-Practice-Softball-Official-Size-Weight-Unmarked-Training-Ball_59aaba0b-51ef-4aeb-8729-1b63c91ffc33.576603cf2805f7f3b197a7673d6a24db.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF");
+			background-size: 80px;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -22,6 +24,9 @@
 
 		.board {
 			height: 100vh;
+			background-image:url("https://nwccrangers.com/images/2024/4/22/DJI_0123.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -44,6 +49,7 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+			var boardHeight = jQuery(window).height(); //the maximum Y-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -52,8 +58,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -66,10 +73,13 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
-			var positionX = 0;
+			var ranNum = Math.random() * 100;
+			var boxSize = 70;
+			var positionX = ranNum;
 			var points = 0;
 			var speed = 10;
-
+			var positionY = 0;
+			var speedY = 10;
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -77,15 +87,24 @@
 			turn it around! 
 			*/
 			function update() {
-				moveBoxTo(positionX);
+				moveBoxTo(positionX, positionY);
 				positionX += speed;
+				positionY += speedY;
 
-				if (positionX >= boardWidth) {
+				if (positionX >= boardWidth - boxSize) {
 					speed *= -1;
 				}
 				if (positionX <= 0) {
 					speed *= -1;
 				}
+
+				if (positionY >= boardHeight - boxSize) {
+					speedY *= -1;
+				}
+				if (positionY <= 0) {
+					speedY *= -1;
+				}
+				
 			};
 
 			/* 
@@ -98,11 +117,8 @@
 				points ++;
 				changeBoxText(points);
 				speed = 3 * points + 10;
+				speedY = 3 * points + 10;
 			};
-
-
-
-
 
 		})();
 	</script>
